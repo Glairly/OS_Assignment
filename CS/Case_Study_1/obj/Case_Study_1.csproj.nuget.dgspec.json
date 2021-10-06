@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\grade15\\Os\\CS\\Case_Study_1\\Case_Study_1.csproj": {}
+    "C:\\Users\\USER\\Desktop\\grade15\\Os\\Assignment\\CS\\Case_Study_1\\Case_Study_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\grade15\\Os\\CS\\Case_Study_1\\Case_Study_1.csproj": {
+    "C:\\Users\\USER\\Desktop\\grade15\\Os\\Assignment\\CS\\Case_Study_1\\Case_Study_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\grade15\\Os\\CS\\Case_Study_1\\Case_Study_1.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\grade15\\Os\\Assignment\\CS\\Case_Study_1\\Case_Study_1.csproj",
         "projectName": "Case_Study_1",
-        "projectPath": "C:\\Users\\USER\\Desktop\\grade15\\Os\\CS\\Case_Study_1\\Case_Study_1.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\grade15\\Os\\Assignment\\CS\\Case_Study_1\\Case_Study_1.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\grade15\\Os\\CS\\Case_Study_1\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\grade15\\Os\\Assignment\\CS\\Case_Study_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"

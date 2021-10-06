@@ -10,9 +10,10 @@ namespace Problem01
     class Program
     {
         static byte[] Data_Global = new byte[1000000000];
-        static long Sum_Global = 0;
+        static long[] Sum_Global = new long[4];
         static int G_index = 0;
         static Thread t1,t2,t3,t4;
+        // 30667ms
 
         static int ReadData()
         {
@@ -36,42 +37,43 @@ namespace Problem01
 
             return returnData;
         }
-        static void sum()
+        static void sum(ref long psum, int idx)
         {
-            int val = Data_Global[G_index];
-            int o = 0;
+            // time reduced by changed data ref method
+            int val = Data_Global[idx];
             if (val % 2 == 0)
             {
-                o -= val;
+                psum -= val;
             }
             else if (val % 3 == 0)
             {
-                o += (val*2);
+                psum += (val * 2);
             }
             else if (val % 5 == 0)
             {
-                o += (val / 2);
+                psum += (val / 2);
             }
-            else if (val %7 == 0)
+            else if (val % 7 == 0)
             {
-                o += (val / 3);
+                psum += (val / 3);
             }
-            Data_Global[G_index] = 0;
-            Sum_Global += o;
-            // Interlocked.Add(ref Sum_Global,o);
-            // Interlocked.Increment(ref G_index);  
-            G_index++; 
+            Data_Global[idx] = 0;
         }
 
-        static void task(){
-            for (int i = 0; i < 1000000000/2; i++)
-                sum();
+        static void task(ref long psum,int start,int stop){
+                for(int i = start;i < stop;++i)
+                {
+                     sum(ref psum,i);
+                }
         }
+
 
         static void Main(string[] args)
         {
             Stopwatch sw = new Stopwatch();
-            int i, y;
+            int y;
+            const long correct = 888701676;
+            const int  approxDefaultRuntime = 30000;
 
             /* Read data from file */
             Console.Write("Data read...");
@@ -85,25 +87,84 @@ namespace Problem01
                 Console.WriteLine("Read Failed!");
             }
 
-            t1 = new Thread(task);
-            t2 = new Thread(task);
+            var cores = 4;
+            var divider = 1000000000/cores;
+
+            // var t_array = new Thread[cores];
+
+            t1 = new Thread(() => {
+                task(ref Sum_Global[0],0,divider);
+            });
+
+            t2 = new Thread(() => {
+                task(ref Sum_Global[1],divider,divider * 2);
+            });
+
+            t3 = new Thread(() => {
+                task(ref Sum_Global[2],divider * 2 ,divider * 3);
+            });
+
+            t4 = new Thread(() => {
+                task(ref Sum_Global[3],divider * 3 ,divider * 4);
+            });
+         
+
             /* Start */
             Console.Write("\n\nWorking...");
             sw.Start();
 
-
+          
             t1.Start();
             t2.Start();
+            t3.Start();
+            t4.Start();
 
             t1.Join();
             t2.Join();
+            t3.Join();
+            t4.Join();
+
+            // for(int i = 0; i < cores ; ++i){
+            //     t_array[i].Start();
+            // }
+
+            // for(int i = 0; i < cores ; ++i){
+            //     t_array[i].Join();
+            // }
+            
+            // for (i = 0; i < 1000000000; i++){
+            //     sum();
+            // }
+
+            // add worker doesn't work
+            // for (; G_index < 500;) {
+            //     // add workers
+            //     for(int j = 0; j < cores; ++j){
+            //        G_index++;   
+            //        t_array[j] = new Thread(sum);
+            //        t_array[j].Start();
+            //     }
+
+            //     for(int j = 0; j < cores; ++j){
+            //        t_array[j].Join();
+            //     }
+
+            //      Console.WriteLine("{0}",G_index);
+                 
+            // }
+
+            // Console.WriteLine("{0}",G_index);
 
             sw.Stop();
             Console.WriteLine("Done.");
 
             /* Result */
-            Console.WriteLine("Summation result: {0}", Sum_Global);
+            long s = 0;
+            Array.ForEach(Sum_Global, i => s += i);
+            Console.WriteLine("Summation result: {0}", s);
             Console.WriteLine("Time used: " + sw.ElapsedMilliseconds.ToString() + "ms");
+            Console.WriteLine("Time Reduced: {0}%", (1 - (sw.ElapsedMilliseconds * 1.0)/(approxDefaultRuntime * 1.0)).ToString("N2") );
+            Console.WriteLine("Summation Correctness: {0}", s == correct);
         }
     }
 }
