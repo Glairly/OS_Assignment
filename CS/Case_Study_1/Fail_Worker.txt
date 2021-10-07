@@ -37,10 +37,10 @@ namespace Problem01
 
             return returnData;
         }
-        static void sum(int idx)
+        static void sum()
         {
             // time reduced by changed data ref method
-            int val = Data_Global[idx];
+            int val = Data_Global[G_index];
             int o = 0;
             if (val % 2 == 0)
             {
@@ -58,15 +58,15 @@ namespace Problem01
             {
                 o += (val / 3);
             }
-            Data_Global[idx] = 0;
+            Data_Global[G_index] = 0;
             Interlocked.Add(ref Sum_Global,o);
-            // Interlocked.Increment(ref G_index);
+            Interlocked.Increment(ref G_index);
         }
 
         static void task(int start,int stop){
                 for(int i = start;i < stop;++i)
                 {
-                     sum(i);
+                     sum();
                 }
         }
 
@@ -93,70 +93,27 @@ namespace Problem01
             var cores = 4;
             var divider = 1000000000/cores;
 
-            // var t_array = new Thread[cores];
-
-            t1 = new Thread(() => {
-                task(0,divider);
-            });
-
-            t2 = new Thread(() => {
-                task(divider,divider * 2);
-            });
-
-            t3 = new Thread(() => {
-                task(divider * 2 ,divider * 3);
-            });
-
-            t4 = new Thread(() => {
-                task(divider * 3 ,divider * 4);
-            });
+            var t_array = new Thread[cores];
          
-
             /* Start */
             Console.Write("\n\nWorking...");
             sw.Start();
 
-          
-            t1.Start();
-            t2.Start();
-            t3.Start();
-            t4.Start();
-
-            t1.Join();
-            t2.Join();
-            t3.Join();
-            t4.Join();
-
-            // for(int i = 0; i < cores ; ++i){
-            //     t_array[i].Start();
-            // }
-
-            // for(int i = 0; i < cores ; ++i){
-            //     t_array[i].Join();
-            // }
-            
-            // for (i = 0; i < 1000000000; i++){
-            //     sum();
-            // }
 
             // add worker doesn't work
-            // for (; G_index < 500;) {
-            //     // add workers
-            //     for(int j = 0; j < cores; ++j){
-            //        G_index++;   
-            //        t_array[j] = new Thread(sum);
-            //        t_array[j].Start();
-            //     }
+            for (; G_index < 500;) {
+                // add workers
+                for(int j = 0; j < cores; ++j){
+                   G_index++;   
+                    t_array[j] = new Thread(sum);
+                    t_array[j].Start();
+                 }
 
-            //     for(int j = 0; j < cores; ++j){
-            //        t_array[j].Join();
-            //     }
+                 for(int j = 0; j < cores; ++j){
+                    t_array[j].Join();
+                 }
 
-            //      Console.WriteLine("{0}",G_index);
-                 
-            // }
-
-            // Console.WriteLine("{0}",G_index);
+            }
 
             sw.Stop();
             Console.WriteLine("Done.");

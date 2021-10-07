@@ -37,10 +37,10 @@ namespace Problem01
 
             return returnData;
         }
-        static void sum(int idx)
+        static void sum()
         {
             // time reduced by changed data ref method
-            int val = Data_Global[idx];
+            int val = Data_Global[G_index];
             int o = 0;
             if (val % 2 == 0)
             {
@@ -58,15 +58,15 @@ namespace Problem01
             {
                 o += (val / 3);
             }
-            Data_Global[idx] = 0;
+            Data_Global[G_index] = 0;
             Interlocked.Add(ref Sum_Global,o);
-            // Interlocked.Increment(ref G_index);
+            Interlocked.Increment(ref G_index);
         }
 
         static void task(int start,int stop){
                 for(int i = start;i < stop;++i)
                 {
-                     sum(i);
+                     sum();
                 }
         }
 
