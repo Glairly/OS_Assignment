@@ -1,0 +1,16 @@
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.exe
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.deps.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.runtimeconfig.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.runtimeconfig.dev.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\ref\Sync.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\bin\Debug\net5.0\Sync.pdb
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.AssemblyInfo.cs
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\ref\Sync.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.pdb
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync\obj\Debug\net5.0\Sync.genruntimeconfig.cache
