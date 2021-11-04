@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Threading;
 
@@ -37,7 +37,7 @@ namespace OS_Problem_02
             for (i = 1; i < 51; i++)
             {
                 lock(_Lock){
-                    while(Count >= 10){ 
+                    if(Count >= 10){ 
                         Monitor.Wait(_Lock); 
                     }
 
@@ -55,7 +55,7 @@ namespace OS_Problem_02
             for (i = 100; i < 151; i++)
             {
                 lock(_Lock){
-                    while(Count >= 10){ 
+                    if(Count >= 10){ 
                         Monitor.Wait(_Lock); 
                     }
 
