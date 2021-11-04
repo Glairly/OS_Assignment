@@ -1,0 +1,16 @@
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.exe
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.deps.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.runtimeconfig.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.runtimeconfig.dev.json
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\ref\Sync_case#2.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\bin\Debug\net5.0\Sync_case#2.pdb
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.AssemblyInfo.cs
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\ref\Sync_case#2.dll
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.pdb
+C:\Users\USER\Desktop\grade15\Os\Assignment\Sync_case#2\obj\Debug\net5.0\Sync_case#2.genruntimeconfig.cache
