@@ -75,7 +75,7 @@ namespace OS_Problem_02
             for (i=0; i< 60; i++)
             {
                 lock(_Lock){
-                    while(Count <= 0) Monitor.Wait(_Lock);
+                    if(Count <= 0) Monitor.Wait(_Lock);   <-----
                     j = DeQueue();
                     Console.WriteLine("j={0}, thread:{1}", j, t);
                     Monitor.Pulse(_Lock);
