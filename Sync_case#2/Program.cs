@@ -43,7 +43,7 @@ namespace OS_Problem_02
 
                     EnQueue(i);
                     Monitor.Pulse(_Lock);
-                    Thread.Sleep(100);
+                    Thread.Sleep(5);
                 }
             }
         }
@@ -61,7 +61,7 @@ namespace OS_Problem_02
 
                     EnQueue(i);
                     Monitor.Pulse(_Lock);
-                    Thread.Sleep(100);
+                    Thread.Sleep(5);
                 }
             }
         }
@@ -106,6 +106,6 @@ namespace OS_Problem_02
 // todo
 // [done] Enqueue must wait for queue to be availabled (count < 10) 
 // [done] Dequeue must have at least one element (count > 0)
-// [] Must sync
+// [done ?] Must sync
 // [done] Dequeue must be sequence
 // [] if not bring some reason !!?

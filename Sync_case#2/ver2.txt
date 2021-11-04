@@ -103,6 +103,12 @@ namespace OS_Problem_02
 }
 
 
+// Bugs
+// เมื่อลองสลับเวลาของ Thread.sleep() พบว่าเมื่อ th02 ทำงานไวกว่าจะติดปัญหาเหมือนเติมกับ ver 1
+// Debugs
+// เปลี่ยน if เป็น while ในการเช็คให้ wait
+
+
 // todo
 // [done] Enqueue must wait for queue to be availabled (count < 10) 
 // [done] Dequeue must have at least one element (count > 0)

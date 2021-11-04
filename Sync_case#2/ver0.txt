@@ -103,6 +103,9 @@ namespace OS_Problem_02
 }
 
 
+// Implement
+// lock ในการป้องกัน Race Condition และ เพิ่ม if ในการเช็ค Condition โดยใช้ Condition Variable  
+
 // todo
 // [done] Enqueue must wait for queue to be availabled (count < 10) 
 // [done] Dequeue must have at least one element (count > 0)

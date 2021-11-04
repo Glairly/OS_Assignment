@@ -102,6 +102,11 @@ namespace OS_Problem_02
     }
 }
 
+// Bugs
+// เมื่อเปิดใช้งาน t11.Start() ทำให้รู้ว่าจาก ver0 เกิดการ Enqueue ซ้ำซ้อนกันระหว่าง t1 และ t11 เนื่องจากการที่ไม่มี Second check จึงทำให้
+// เมื่อเวลาที่ t1 หรือ t11 ในรับการปลดล็อค ก็จะทำการ execute code block ถัดไปจากที่มีการ Wait ไป โดยไม่คำนึงถึง Condition ว่าจะตรงหรือไม่
+// Debugs
+// เปลี่ยน if เป็น while เพื่อให้มีการ Second check
 
 // todo
 // [done] Enqueue must wait for queue to be availabled (count < 10) 
